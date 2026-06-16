@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>پرونده ۱۲۵۸۶۰۷۶ — Akte 12586076</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #8affb7;
+    --paper: #a3ffc7;
+    --ink: #0d0d0d;
+    --ink-soft: #2a2a2a;
+    --ink-light: #4a4a4a;
+    --rule: #5cc88a;
+    --accent: #0d0d0d;
+    --accent-soft: #2a2a2a;
+    --marker: #0d0d0d;
+    --highlight: rgba(13, 13, 13, 0.12);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+  html, body {
+    height: 100%; overflow: hidden;
+    background: var(--bg); color: var(--ink);
+    font-family: 'Vazirmatn', system-ui, sans-serif;
+    font-weight: 400; line-height: 1.85;
+    -webkit-font-smoothing: antialiased;
+  }
+  html[lang="de"] body { font-family: 'Inter', system-ui, sans-serif; line-height: 1.7; }
+  .mono {
+    font-family: 'IBM Plex Mono', monospace;
+    font-feature-settings: "ss01";
+    direction: ltr; unicode-bidi: isolate; display: inline-block;
+  }
+  [lang="fa"] .de-only { display: none; }
+  [lang="de"] .fa-only { display: none; }
+
+  .topbar {
+    position: fixed; top: 0; left: 0; right: 0;
+    padding: 14px 24px 10px;
+    background: linear-gradient(to bottom, var(--bg) 70%, transparent);
+    z-index: 50;
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  }
+  .lang-toggle {
+    display: flex; background: var(--paper);
+    border: 1px solid var(--rule); border-radius: 999px; padding: 3px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px; letter-spacing: 0.1em;
+  }
+  .lang-toggle button {
+    background: transparent; border: none; padding: 5px 12px; cursor: pointer;
+    border-radius: 999px; color: var(--ink-light);
+    font-family: inherit; font-size: inherit; letter-spacing: inherit;
+    text-transform: uppercase; transition: all 0.25s;
+  }
+  .lang-toggle button.active { background: var(--accent); color: var(--bg); font-weight: 600; }
+  .progress-text {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px; color: var(--ink-light);
+    letter-spacing: 0.05em; white-space: nowrap;
+  }
+  .progress-track {
+    position: fixed; top: 48px; left: 24px; right: 24px;
+    height: 2px; background: var(--rule); z-index: 49;
+  }
+  .progress-fill {
+    height: 100%; background: var(--accent); width: 0;
+    transition: width 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .stage {
+    height: 100vh; height: 100dvh;
+    padding: 90px 0 90px; overflow: hidden; position: relative;
+  }
+  .slide {
+    position: absolute; inset: 90px 0 90px;
+    padding: 0 28px; overflow-y: auto; overflow-x: hidden;
+    opacity: 0; transform: translateX(-40px); pointer-events: none;
+    transition: opacity 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+                transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin; scrollbar-color: var(--rule) transparent;
+  }
+  .slide.active { opacity: 1; transform: translateX(0); pointer-events: auto; }
+  .slide.exit-right { opacity: 0; transform: translateX(40px); }
+  html[lang="de"] .slide { transform: translateX(40px); }
+  html[lang="de"] .slide.active { transform: translateX(0); }
+  html[lang="de"] .slide.exit-right { transform: translateX(-40px); }
+  .slide::-webkit-scrollbar { width: 4px; }
+  .slide::-webkit-scrollbar-thumb { background: var(--rule); border-radius: 2px; }
+
+  .container { max-width: 720px; margin: 0 auto; }
+
+  .cover { text-align: center; padding-top: 40px; }
+  .cover .label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px; letter-spacing: 0.25em;
+    color: var(--ink-light); text-transform: uppercase; margin-bottom: 28px;
+  }
+  .cover h1 {
+    font-size: clamp(34px, 8.5vw, 60px); font-weight: 800;
+    line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 18px;
+  }
+  .cover h1 .accent { color: var(--accent); }
+  .cover .subtitle {
+    font-size: clamp(15px, 3.5vw, 18px); color: var(--ink-soft);
+    max-width: 520px; margin: 0 auto 40px; font-weight: 400;
+  }
+  .stat-block {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 0;
+    margin-top: 40px; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule);
+  }
+  .stat { padding: 18px 8px; text-align: center; }
+  html[lang="fa"] .stat + .stat { border-right: 1px solid var(--rule); }
+  html[lang="de"] .stat + .stat { border-left: 1px solid var(--rule); }
+  .stat .num {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 28px; font-weight: 600; color: var(--accent);
+    display: block; margin-bottom: 4px;
+  }
+  .stat .lbl { font-size: 11px; color: var(--ink-light); letter-spacing: 0.05em; }
+
+  .event-num {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px; color: var(--ink-light);
+    letter-spacing: 0.12em; margin-bottom: 8px;
+  }
+  .event-date {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px; color: var(--marker); letter-spacing: 0.05em;
+    margin-bottom: 14px; display: inline-block;
+    border-bottom: 1px solid var(--marker); padding-bottom: 2px;
+  }
+  .event-title {
+    font-size: clamp(24px, 5.5vw, 34px); font-weight: 700;
+    line-height: 1.25; margin-bottom: 20px; letter-spacing: -0.01em;
+  }
+  .event-body { font-size: clamp(15px, 3.6vw, 17px); color: var(--ink); }
+  html[lang="fa"] .event-body { line-height: 1.95; }
+  html[lang="de"] .event-body { line-height: 1.75; }
+  .event-body p + p { margin-top: 14px; }
+  .event-body strong { font-weight: 600; }
+  .event-body .hl { background: var(--ink); color: var(--bg); padding: 1px 6px; border-radius: 2px; font-weight: 600; }
+
+  .doc-quote {
+    margin: 22px 0; padding: 20px 22px;
+    background: var(--paper);
+    box-shadow: 0 1px 0 rgba(0,0,0,0.04), 0 6px 20px -10px rgba(0,0,0,0.12);
+    position: relative;
+  }
+  html[lang="fa"] .doc-quote { border-right: 3px solid var(--accent); }
+  html[lang="de"] .doc-quote { border-left: 3px solid var(--accent); }
+  .doc-quote::before {
+    content: attr(data-label);
+    position: absolute; top: -10px;
+    background: var(--accent); color: var(--bg);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px; letter-spacing: 0.15em;
+    padding: 3px 10px; text-transform: uppercase;
+    font-weight: 600;
+  }
+  html[lang="fa"] .doc-quote::before { right: 16px; }
+  html[lang="de"] .doc-quote::before { left: 16px; }
+  .doc-quote .source {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px; color: var(--ink-light);
+    margin-bottom: 10px; letter-spacing: 0.05em;
+  }
+  .doc-quote .text {
+    font-style: italic; color: var(--ink);
+    font-size: 14px; line-height: 1.75;
+    direction: ltr; text-align: left;
+  }
+  .doc-quote .text.rtl { direction: rtl; text-align: right; }
+
+  .sub-list { margin: 16px 0 0; padding: 0; list-style: none; }
+  .sub-list li { position: relative; margin-bottom: 8px; font-size: 15px; line-height: 1.7; }
+  html[lang="fa"] .sub-list li { padding-right: 22px; }
+  html[lang="de"] .sub-list li { padding-left: 22px; }
+  .sub-list li::before { content: ''; position: absolute; top: 14px; width: 12px; height: 1px; background: var(--accent); }
+  html[lang="fa"] .sub-list li::before { right: 0; }
+  html[lang="de"] .sub-list li::before { left: 0; }
+
+  .demands-heading {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px; letter-spacing: 0.2em;
+    color: var(--ink-light); text-transform: uppercase; margin-bottom: 8px;
+  }
+  .demands-title {
+    font-size: clamp(28px, 6vw, 38px); font-weight: 700;
+    margin-bottom: 28px; letter-spacing: -0.01em;
+  }
+  .demand { padding: 18px 0; border-bottom: 1px solid var(--rule); }
+  .demand:last-child { border-bottom: none; }
+  .demand-num {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px; color: var(--accent); font-weight: 600;
+    letter-spacing: 0.1em; margin-bottom: 6px;
+  }
+  .demand-text { font-size: 16px; line-height: 1.75; }
+
+  .question-box {
+    margin-top: 24px; padding: 22px;
+    background: var(--paper); border: 1px dashed var(--accent-soft);
+  }
+  .question-box .q-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px; color: var(--accent);
+    letter-spacing: 0.15em; margin-bottom: 10px;
+  }
+
+  .key-evidence {
+    text-align: center;
+    display: flex; flex-direction: column; justify-content: center;
+    min-height: 60vh;
+  }
+  .key-evidence .marker {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px; letter-spacing: 0.3em;
+    color: var(--accent); text-transform: uppercase; margin-bottom: 24px;
+  }
+  .key-evidence .key-quote {
+    font-size: clamp(20px, 4.5vw, 28px); font-weight: 500;
+    line-height: 1.5; color: var(--ink);
+    max-width: 600px; margin: 0 auto; font-style: italic;
+  }
+  .key-evidence .attribution {
+    margin-top: 24px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px; color: var(--ink-light); letter-spacing: 0.05em;
+  }
+
+  .nav {
+    position: fixed; bottom: 0; left: 0; right: 0;
+    padding: 16px 24px 22px;
+    background: linear-gradient(to top, var(--bg) 60%, transparent);
+    z-index: 50;
+    display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  }
+  .nav-btn {
+    background: var(--accent); color: var(--bg); border: none;
+    width: 48px; height: 48px; border-radius: 50%; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px; transition: transform 0.2s, background 0.2s;
+    font-family: inherit; flex-shrink: 0; font-weight: 700;
+  }
+  .nav-btn:hover { transform: scale(1.08); background: var(--accent-soft); }
+  .nav-btn:disabled { opacity: 0.2; cursor: not-allowed; }
+  .nav-btn:disabled:hover { transform: none; background: var(--accent); }
+
+  .dots {
+    display: flex; gap: 4px; flex: 1;
+    justify-content: center; max-width: 60%; flex-wrap: wrap;
+  }
+  .dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--rule); cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+  }
+  .dot.active { background: var(--accent); transform: scale(1.5); }
+  .dot:hover { background: var(--accent-soft); }
+
+  @media (max-width: 600px) {
+    .stage { padding: 80px 0 80px; }
+    .slide { inset: 80px 0 80px; padding: 0 22px; }
+    .topbar { padding: 12px 14px 8px; }
+    .progress-track { top: 46px; left: 14px; right: 14px; }
+    .nav { padding: 12px 18px 18px; }
+    .dots { max-width: 50%; }
+    .case-id { font-size: 10px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .slide { transition: opacity 0.2s; transform: none !important; }
+  }
+
+  ::selection { background: var(--accent); color: white; }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="lang-toggle">
+    <button data-lang="fa" class="active">فا</button>
+    <button data-lang="de">DE</button>
+  </div>
+  <div class="progress-text"><span id="progressNum">۰۱</span> / <span id="progressTotal">۱۹</span></div>
+</header>
+<div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+
+<main class="stage" id="stage">
+
+  <section class="slide active" data-idx="0">
+    <div class="container cover">
+      <div class="label">
+        <span class="fa-only">پرونده مصرف‌کننده</span>
+        <span class="de-only">Verbraucherakte</span>
+      </div>
+      <h1>
+        <span class="fa-only">یک خطای<br><span class="accent">چهار ساله</span></span>
+        <span class="de-only">Ein Fehler,<br><span class="accent">vier Jahre lang</span></span>
+      </h1>
+      <p class="subtitle">
+        <span class="fa-only">ماجرای یک شماره کنتور اشتباه و چهار سال بوروکراسی، خطاهای پذیرفته‌شده و خاموش‌مانده.</span>
+        <span class="de-only">Die Geschichte einer falschen Zählernummer und vier Jahre Bürokratie, eingestandener Fehler und ohrenbetäubendem Schweigen.</span>
+      </p>
+      <div class="stat-block">
+        <div class="stat">
+          <span class="num">4</span>
+          <span class="lbl"><span class="fa-only">سال</span><span class="de-only">Jahre</span></span>
+        </div>
+        <div class="stat">
+          <span class="num">2.407</span>
+          <span class="lbl"><span class="fa-only">یورو</span><span class="de-only">Euro</span></span>
+        </div>
+        <div class="stat">
+          <span class="num">7</span>
+          <span class="lbl"><span class="fa-only">طرف درگیر</span><span class="de-only">Parteien</span></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" data-idx="1">
+    <div class="container">
+      <div class="event-num"><span class="fa-only">معرفی</span><span class="de-only">Beteiligte</span></div>
+      <h2 class="event-title">
+        <span class="fa-only">طرف‌های درگیر</span>
+        <span class="de-only">Die Beteiligten</span>
+      </h2>
+      <div class="event-body">
+        <ul class="sub-list">
+          <li><strong class="mono">CAPERA Immobilien Service GmbH</strong> — <span class="fa-only">مدیر ساختمان</span><span class="de-only">Hausverwaltung</span></li>
+          <li><strong class="mono">Union Investment Institutional Property GmbH RVG</strong> — <span class="fa-only">صاحب ملک</span><span class="de-only">Eigentümer</span></li>
+          <li><strong class="mono">eprimo GmbH</strong> — <span class="fa-only">شرکت برقی که باهاش قرارداد داشتم</span><span class="de-only">Mein vertraglicher Stromversorger</span></li>
+          <li><strong class="mono">RheinEnergie AG</strong> — <span class="fa-only">شرکت برق دیگری که ادعا می‌کند بهم برق داده</span><span class="de-only">Stromversorger, der mir angeblich auch Strom geliefert hat</span></li>
+          <li><strong class="mono">Sirius Inkasso GmbH</strong> — <span class="fa-only">شرکت وصول مطالبات</span><span class="de-only">Inkassounternehmen</span> (Lowell Group)</li>
+          <li><strong class="mono">ARAG</strong> — <span class="fa-only">بیمه حقوقی من</span><span class="de-only">Meine Rechtsschutzversicherung</span></li>
+          <li><strong class="mono">Kanzlei WINTER Rechtsanwälte</strong> — <span class="fa-only">وکیل من</span><span class="de-only">Meine Anwaltskanzlei</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" data-idx="2">
+    <div class="container">
+      <div class="event-num"><span class="fa-only">رویداد ۰۱</span><span class="de-only">Ereignis 01</span></div>
+      <div class="event-date"><span class="fa-only">نوامبر ۲۰۲۱</span><span class="de-only">November 2021</span></div>
+      <h2 class="event-title">
+        <span class="fa-only">ورود به خانه و قرارداد اشتباه</span>
+        <span class="de-only">Einzug und der falsche Vertrag</span>
+      </h2>
+      <div class="event-body">
+        <div class="fa-only">
+          <p>به آپارتمانی در <span class="mono">Krefelder Str. 103, 50670 Köln</span> نقل مکان کردم.</p>
+          <p>CAPERA شماره کنتور <strong class="hl mono">12734843</strong> را به من تحویل داد. با اعتماد به این اطلاعات، یک قرارداد برق با <strong class="mono">eprimo</strong> (شماره مشتری: <span class="mono">46899831</span>) برای همان کنتور بستم.</p>
+        </div>
+        <div class="de-only">
+          <p>Ich zog in die Wohnung <span class="mono">Krefelder Str. 103, 50670 Köln</span> ein.</p>
+          <p>CAPERA übergab mir die Zählernummer <strong class="hl mono">12734843</strong>. Im Vertrauen auf diese Angabe schloss ich einen Stromvertrag mit <strong class="mono">eprimo</strong> (Kundennummer: <span class="mono">46899831</span>) für eben diesen Zähler ab.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" data-idx="3">
+    <div class="container">
+      <div class="event-num"><span class="fa-only">رویداد ۰۲</span><span class="de-only">Ereignis 02</span></div>
+      <div class="event-date"><span class="fa-only">۲۰۲۱ تا ۲۰۲۴</span><span class="de-only">2021 – 2024</span></div>
+      <h2 class="event-title">
+        <span class="fa-only">سه سال پرداخت منظم</span>
+        <span class="de-only">Drei Jahre regelmäßiger Zahlungen</span>
+      </h2>
+      <div class="event-body">
+        <div class="fa-only">
+          <p>برای سه سال تمام، قبض‌های برق را به طور منظم به <strong class="mono">eprimo</strong> پرداخت کردم. هیچ مشکلی نبود.</p>
+          <p>تا اینکه ناگهان…</p>
+        </div>
+        <div class="de-only">
+          <p>Drei Jahre lang zahlte ich meine Stromrechnungen regelmäßig an <strong class="mono">eprimo</strong>. Es gab keinerlei Probleme.</p>
+          <p>Bis plötzlich …</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" data-idx="4">
+    <div class="container">
+      <div class="event-num"><span class="fa-only">رویداد ۰۳</span><span class="de-only">Ereignis 03</span></div>
+      <div class="event-date"><span class="fa-only">آگوست ۲۰۲۴</span><span class="de-only">August 2024</span></div>
+      <h2 class="event-title">
+        <span class="fa-only">اولین Mahnung از RheinEnergie</span>
+        <span class="de-only">Die erste Mahnung von RheinEnergie</span>
+      </h2>
+      <div class="event-body">
+        <div class="fa-only">
+          <p>نامه‌ای از <strong class="mono">RheinEnergie</strong> دریافت کردم — شرکتی که حتی نمی‌شناختم — که از من طلب پول می‌کرد.</p>
+          <p><strong>همان لحظه</strong> موضوع را با CAPERA مطرح کردم. بعد از هر Mahnung هم با RheinEnergie تماس می‌گرفتم و درخواست تعویق پرداخت می‌کردم تا مشکل با CAPERA حل شود.</p>
+        </div>
+        <div class="de-only">
+          <p>Ich erhielt eine Mahnung von <strong class="mono">RheinEnergie</strong> — einem Unternehmen, das ich nicht einmal kannte — über offene Forderungen.</p>
+          <p>Ich wandte mich <strong>sofort</strong> an CAPERA. Nach jeder weiteren Mahnung kontaktierte ich RheinEnergie und bat um Stundung, bis die Sache mit CAPERA geklärt sei.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" data-idx="5">
+    <div class="container">
+      <div class="event-num"><span class="fa-only">رویداد ۰۴ · مدرک کلیدی</span><span class="de-only">Ereignis 04 · Schlüsselbeweis</span></div>
+      <div class="event-date"><span class="fa-only">۲۶ آگوست ۲۰۲۴</span><span class="de-only">26. August 2024</span></div>
+      <h2 class="event-title">
+        <span class="fa-only">CAPERA رسماً خطا را پذیرفت</span>
+        <span class="de-only">CAPERA gesteht den Fehler schriftlich ein</span>
+      </h2>
+      <div class="event-body">
+        <p class="fa-only"><strong class="mono">Hanife Yasar</strong> از CAPERA برای من ایمیلی فرستاد:</p>
+        <p class="de-only"><strong class="mono">Hanife Yasar</strong> von CAPERA schrieb mir per E-Mail:</p>
+        <div class="doc-quote" data-label="BEWEIS">
+          <div class="source">From: Hanife Yasar &lt;h.yasar@capera-immobilien.de&gt;<br>Date: 26.08.2024</div>
+          <div class="text">"es tut uns leid, Ihnen es zu vermitteln, dass bei der Übergabe der Wohneinheit der Verwaltung ein Fehler unterlaufen ist. Wir bitten Sie... den Stromzähler 12735025 anzumelden und den Stromzähler, welche Sie angemeldet haben seinerzeit abzumelden."</div>
+        </div>
+        <div class="fa-only">
+          <p>CAPERA به طور <strong>کتبی</strong> پذیرفت که خطا کرده‌اند. کنتور درست در واقع <strong class="hl mono">12735025</strong> بود، نه آن چیزی که در ابتدا گفته بودند.</p>
+        </div>
+        <div class="de-only">
+          <p>CAPERA hat den Fehler <strong>schriftlich</strong> eingestanden. Die richtige Zählernummer lautete <strong class="hl mono">12735025</strong>, nicht die ursprünglich genannte.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" data-idx="6">
+    <div class="container">
+      <div class="event-num"><span class="fa-only">رویداد ۰۵</span><span class="de-only">Ereignis 05</span></div>
+      <div class="event-date"><span class="fa-only">آگوست ۲۰۲۴</span><span class="de-only">August 2024</span></div>
+      <h2 class="event-title">
+        <span class="fa-only">قرارداد جدید eprimo</span>
+        <span class="de-only">Neuer eprimo-Vertrag</span>
+      </h2>
+      <div class="event-body">
+        <div class="fa-only">
+          <p>بر اساس دستور CAPERA:</p>
+          <ul class="sub-list">
+            <li>قرارداد قبلی <span class="mono">eprimo</span> (با کنتور اشتباه <span class="mono">12734843</span>) را کنسل کردم</li>
+            <li>قرارداد جدید <span class="mono">eprimo</span> با کنتور درست (<strong class="mono">12735025</strong>) بستم</li>
+          </ul>
+          <p>تصور می‌کردم مشکل حل شده. اشتباه می‌کردم.</p>
+        </div>
+        <div class="de-only">
+          <p>Auf Anweisung von CAPERA:</p>
+          <ul class="sub-list">
+            <li>Kündigte ich den alten <span class="mono">eprimo</span>-Vertrag (mit der falschen Zählernummer <span class="mono">12734843</span>)</li>
+            <li>Schloss einen neuen <span class="mono">eprimo</span>-Vertrag mit der richtigen Zählernummer ab (<strong class="mono">12735025</strong>)</li>
+          </ul>
+          <p>Ich dachte, die Sache sei erledigt. Ich hatte mich getäuscht.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" data-idx="7">
+    <div class="container">
+      <div class="event-num"><span class="fa-only">رویداد ۰۶</span><span class="de-only">Ereignis 06</span></div>
+      <div class="event-date"><span class="fa-only">۲۸ مه ۲۰۲۵</span><span class="de-only">28. Mai 2025</span></div>
+      <h2 class="event-title">
+        <span class="fa-only">فاکتور RheinEnergie</span>
+        <span class="de-only">Die Schlussrechnung von RheinEnergie</span>
+      </h2>
+      <div class="event-body">
+        <div class="fa-only">
+          <p>تقریباً یک سال بعد، RheinEnergie یک <span class="mono">Schlussrechnung</span> برای دوره <strong class="mono">13.10.2023 - 22.09.2024</strong> برای کنتور <span class="mono">12735025</span> فرستاد.</p>
+          <p>مبلغ: <strong class="hl mono">2.064,80 EUR</strong></p>
+        </div>
+        <div class="de-only">
+          <p>Fast ein Jahr später schickte RheinEnergie eine Schlussrechnung für den Zeitraum <strong class="mono">13.10.2023 - 22.09.2024</strong> für den Zähler <span class="mono">12735025</span>.</p>
+          <p>Betrag: <strong class="hl mono">2.064,80 EUR</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" data-idx="8">
+    <div class="container">
+      <div class="event-num"><span class="fa-only">رویداد ۰۷</span><span class="de-only">Ereignis 07</span></div>
+      <div class="event-date"><span class="fa-only">مه - ژوئن ۲۰۲۵</span><span class="de-only">Mai – Juni 2025</span></div>
+      <h2 class="event-title">
+        <span class="fa-only">سکوت</span>
+        <span class="de-only">Schweigen</span>
+      </h2>
+      <div class="event-body">
+        <div class="fa-only">
+          <p>دوباره با CAPERA تماس گرفتم تا بفهمم چه شده.</p>
+          <p><strong>هیچ پاسخی ندادند.</strong></p>
+          <p>نه به ایمیل‌ها. نه به تماس‌ها. هیچ‌چیز.</p>
+        </div>
+        <div class="de-only">
+          <p>Ich kontaktierte CAPERA erneut, um den Sachverhalt zu klären.</p>
+          <p><strong>Keinerlei Rückmeldung.</strong></p>
+          <p>Weder auf E-Mails. Noch auf Anrufe. Nichts.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" data-idx="9">
+    <div class="container">
+      <div class="event-num"><span class="fa-only">رویداد ۰۸</span><span class="de-only">Ereignis 08</span></div>
+      <div class="event-date"><span class="fa-only">آگوست ۲۰۲۵</span><span class="de-only">August 2025</span></div>
+      <h2 class="event-title">
+        <span class="fa-only">تصمیم به قطع اجاره</span>
+        <span class="de-only">Einstellung der Mietzahlung</span>
+      </h2>
+      <div class="event-body">
+        <div class="fa-only">
+          <p>وقتی فهمیدم که این موضوع برای CAPERA <strong>اصلاً مهم نیست</strong>، تنها اهرم باقی‌مانده را به کار بردم:</p>
+          <p>به آن‌ها رسماً اعلام کردم که <strong>دیگر اجاره را پرداخت نمی‌کنم</strong> تا مشکل حل شود.</p>
+        </div>
+        <div class="de-only">
+          <p>Als ich erkannte, dass die Angelegenheit für CAPERA <strong>schlicht nicht wichtig</strong> war, griff ich zum einzigen verbliebenen Druckmittel:</p>
+          <p>Ich teilte CAPERA offiziell mit, dass ich <strong>keine Miete mehr zahlen würde</strong>, bis das Problem gelöst sei.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" data-idx="10">
+    <div class="container">
+      <div class="event-num"><span class="fa-only">رویداد ۰۹ · مدرک کلیدی دوم</span><span class="de-only">Ereignis 09 · Zweiter Schlüsselbeweis</span></div>
+      <div class="event-date"><span class="fa-only">اکتبر ۲۰۲۵</span><span class="de-only">Oktober 2025</span></div>
+      <h2 class="event-title">
+        <span class="fa-only">اولین تماس CAPERA در ۴ سال</span>
+        <span class="de-only">Der erste Anruf von CAPERA in 4 Jahren</span>
+      </h2>
+      <div class="event-body">
+        <div class="fa-only">
+          <p>وقتی به CAPERA اعلام کردم که از این خانه می‌روم، برای <strong>اولین بار در چهار سال</strong> با من تماس گرفتند.</p>
+          <p>یک خانم — که اسمش را نمی‌دانم — پای تلفن به من گفت:</p>
+        </div>
+        <div class="de-only">
+          <p>Als ich CAPERA mitteilte, dass ich auszöge, riefen sie mich <strong>erstmals nach vier Jahren</strong> an.</p>
+          <p>Eine Mitarbeiterin — deren Namen ich nicht kenne — sagte mir am Telefon:</p>
+        </div>
+        <div class="doc-quote" data-label="ZITAT" style="text-align: center;">
+          <div class="source">
+            <span class="fa-only">تماس تلفنی · اکتبر ۲۰۲۵</span>
+            <span class="de-only">Telefonat · Oktober 2025</span>
+          </div>
+          <div class="text rtl fa-only" style="font-size: 18px; text-align: center;">"ما می‌دانیم که مشکل از سمت ماست."</div>
+          <div class="text de-only" style="font-size: 18px; text-align: center; direction: ltr;">"Wir wissen, dass das Problem auf unserer Seite liegt."</div>
+        </div>
+        <div class="fa-only">
+          <p>یک بار دیگر، این بار <strong>شفاهی</strong>، خطای خود را پذیرفتند.</p>
+        </div>
+        <div class="de-only">
+          <p>Erneut wurde der Fehler eingeräumt — diesmal <strong>mündlich</strong>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" data-idx="11">
+    <div class="container">
+      <div class="event-num"><span class="fa-only">رویداد ۱۰</span><span class="de-only">Ereignis 10</span></div>
+      <div class="event-date"><span class="fa-only">۱۴ اکتبر ۲۰۲۵</span><span class="de-only">14. Oktober 2025</span></div>
+      <h2 class="event-title">
+        <span class="fa-only">تحویل خانه</span>
+        <span class="de-only">Wohnungsübergabe</span>
+      </h2>
+      <div class="event-body">
+        <div class="fa-only">
+          <p>آپارتمان را رسماً به CAPERA تحویل دادم. <span class="mono">Abnahmeprotokoll</span> امضا شد.</p>
+          <p>در پروتکل، کنتور <strong class="mono">12735025</strong> رسماً ثبت شد — همان کنتوری که چهار سال CAPERA منکر آن بود.</p>
+        </div>
+        <div class="de-only">
+          <p>Die Wohnung wurde ordnungsgemäß an CAPERA übergeben. Das Abnahmeprotokoll wurde unterschrieben.</p>
+          <p>Im Protokoll wurde Zähler <strong class="mono">12735025</strong> offiziell festgehalten — eben jener Zähler, dessen Existenz CAPERA vier Jahre lang ignoriert hatte.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" data-idx="12">
+    <div class="container">
+      <div class="event-num"><span class="fa-only">رویداد ۱۱</span><span class="de-only">Ereignis 11</span></div>
+      <div class="event-date"><span class="fa-only">ژانویه ۲۰۲۶</span><span class="de-only">Januar 2026</span></div>
+      <h2 class="event-title">
+        <span class="fa-only">رد ARAG</span>
+        <span class="de-only">Ablehnung durch ARAG</span>
+      </h2>
+      <div class="event-body">
+        <div class="fa-only">
+          <p>بیمه حقوقی من <strong class="mono">ARAG</strong> اعلام کرد که نمی‌تواند هزینه این پرونده را پرداخت کند.</p>
+          <p>دلیل: تاریخ <span class="mono">Versicherungsfall</span> به <strong>قبل از شروع قرارداد بیمه‌ام</strong> با ARAG برمی‌گردد.</p>
+          <p>تنها شدم.</p>
+        </div>
+        <div class="de-only">
+          <p>Meine Rechtsschutzversicherung <strong class="mono">ARAG</strong> teilte mir mit, sie könne die Kosten in diesem Fall nicht übernehmen.</p>
+          <p>Begründung: Der Versicherungsfall sei <strong>vor Beginn meines Versicherungsvertrags</strong> mit ARAG eingetreten.</p>
+          <p>Ich stand allein.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" data-idx="13">
+    <div class="container">
+      <div class="event-num"><span class="fa-only">رویداد ۱۲</span><span class="de-only">Ereignis 12</span></div>
+      <div class="event-date"><span class="fa-only">مارس ۲۰۲۶</span><span class="de-only">März 2026</span></div>
+      <h2 class="event-title">
+        <span class="fa-only">مطالبه Sirius Inkasso</span>
+        <span class="de-only">Die Forderung von Sirius Inkasso</span>
+      </h2>
+      <div class="event-body">
+        <div class="fa-only">
+          <p><strong class="mono">Sirius Inkasso</strong> (بخشی از <span class="mono">Lowell Group</span>) از طرف RheinEnergie وارد شد.</p>
+          <p>مبلغ اولیه: <span class="mono">2.064,80 €</span></p>
+          <p>به خاطر بی‌توجهی CAPERA و کش‌دار شدن ماجرا، با هزینه‌های <span class="mono">Mahn</span> و <span class="mono">Inkasso</span> مبلغ <strong>جریمه خورده</strong> و به <strong class="hl mono">2.406,96 EUR</strong> رسید.</p>
+        </div>
+        <div class="de-only">
+          <p><strong class="mono">Sirius Inkasso</strong> (Teil der <span class="mono">Lowell Group</span>) trat im Auftrag von RheinEnergie auf den Plan.</p>
+          <p>Ursprünglicher Betrag: <span class="mono">2.064,80 €</span></p>
+          <p>Wegen der Untätigkeit von CAPERA und der Verschleppung der Angelegenheit war die Forderung durch Mahn- und Inkassokosten auf <strong class="hl mono">2.406,96 EUR</strong> angewachsen.</p>
+        </div>
+        <p class="mono" style="font-size: 13px; color: var(--ink-light); margin-top: 16px;">Aktenzeichen: 12586076</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" data-idx="14">
+    <div class="container">
+      <div class="event-num"><span class="fa-only">رویداد ۱۳</span><span class="de-only">Ereignis 13</span></div>
+      <div class="event-date"><span class="fa-only">آوریل ۲۰۲۶</span><span class="de-only">April 2026</span></div>
+      <h2 class="event-title">
+        <span class="fa-only">وکیل</span>
+        <span class="de-only">Anwaltliche Vertretung</span>
+      </h2>
+      <div class="event-body">
+        <div class="fa-only">
+          <p>وکیل گرفتم: <strong class="mono">Kanzlei WINTER Rechtsanwälte</strong>، آقای <span class="mono">Sonntag</span>.</p>
+          <p>CAPERA به وکیل من هم <strong>هیچ پاسخی نداد</strong>. نه نامه. نه تلفن. نه ایمیل.</p>
+        </div>
+        <div class="de-only">
+          <p>Ich beauftragte einen Anwalt: <strong class="mono">Kanzlei WINTER Rechtsanwälte</strong>, Herr <span class="mono">Sonntag</span>.</p>
+          <p>CAPERA reagierte auch auf meinen Anwalt <strong>nicht</strong>. Keine Briefe. Keine Anrufe. Keine E-Mails.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" data-idx="15">
+    <div class="container">
+      <div class="event-num"><span class="fa-only">رویداد ۱۴</span><span class="de-only">Ereignis 14</span></div>
+      <div class="event-date"><span class="fa-only">مه ۲۰۲۶</span><span class="de-only">Mai 2026</span></div>
+      <h2 class="event-title">
+        <span class="fa-only">پیشنهاد وکیل و تقسیط</span>
+        <span class="de-only">Anwaltsempfehlung und Ratenzahlung</span>
+      </h2>
+      <div class="event-body">
+        <div class="fa-only">
+          <p>وکیلم پیشنهاد داد که پول را پرداخت کنم و همزمان پیگیری حقوقی ادامه دهم.</p>
+          <p>درخواست تقسیط کردم و Sirius Inkasso قبول کرد: <strong>۸۰ یورو در ماه</strong>.</p>
+          <p>از <strong>ژوئن ۲۰۲۶</strong> پرداخت‌ها را شروع کردم.</p>
+        </div>
+        <div class="de-only">
+          <p>Mein Anwalt empfahl mir, zu zahlen und parallel rechtlich vorzugehen.</p>
+          <p>Ich beantragte eine Ratenzahlung, die Sirius Inkasso akzeptierte: <strong>80 Euro monatlich</strong>.</p>
+          <p>Seit <strong>Juni 2026</strong> leiste ich die Zahlungen.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" data-idx="16">
+    <div class="container">
+      <div class="event-num"><span class="fa-only">رویداد ۱۵</span><span class="de-only">Ereignis 15</span></div>
+      <div class="event-date"><span class="fa-only">مه ۲۰۲۶</span><span class="de-only">Mai 2026</span></div>
+      <h2 class="event-title">
+        <span class="fa-only">اقدامات مستقل</span>
+        <span class="de-only">Eigeninitiative</span>
+      </h2>
+      <div class="event-body">
+        <div class="fa-only">
+          <p>چون CAPERA و وکیل نتیجه نگرفتند، خودم وارد عمل شدم:</p>
+          <ul class="sub-list">
+            <li><strong>Schlichtungsantrag</strong> به <span class="mono">Schlichtungsstelle Energie e.V.</span> ثبت کردم</li>
+            <li>نامه‌های رسمی <strong>Einschreiben mit Rückschein</strong> هم به CAPERA و هم به <span class="mono">Union Investment</span> فرستادم. درخواست: بازگشت Kaution (که ۸ ماه از تحویل خانه گذشته بود) و تسویه <span class="mono">Nebenkostenguthaben</span> سال ۲۰۲۴ به مبلغ <span class="mono">941,77 €</span></li>
+            <li>وقت مشاوره با <strong>Verbraucherzentrale Leverkusen</strong> گرفتم</li>
+          </ul>
+        </div>
+        <div class="de-only">
+          <p>Da CAPERA und der Anwalt zu keinem Ergebnis kamen, wurde ich selbst aktiv:</p>
+          <ul class="sub-list">
+            <li>Ich reichte einen <strong>Schlichtungsantrag</strong> bei der <span class="mono">Schlichtungsstelle Energie e.V.</span> ein</li>
+            <li>Ich versandte förmliche Schreiben per <strong>Einschreiben mit Rückschein</strong> an CAPERA <em>und</em> Union Investment, mit der Forderung nach Rückzahlung der Kaution (8 Monate nach Übergabe noch offen) sowie Auszahlung des <span class="mono">Nebenkostenguthabens</span> 2024 in Höhe von <span class="mono">941,77 €</span></li>
+            <li>Ich vereinbarte einen Beratungstermin bei der <strong>Verbraucherzentrale Leverkusen</strong></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" data-idx="17">
+    <div class="container">
+      <div class="demands-heading"><span class="fa-only">جمع‌بندی</span><span class="de-only">Zusammenfassung</span></div>
+      <h2 class="demands-title">
+        <span class="fa-only">خواسته‌ها و سؤالات</span>
+        <span class="de-only">Forderungen und Fragen</span>
+      </h2>
+
+      <div class="demand">
+        <div class="demand-num">01 · <span class="fa-only">مسئولیت</span><span class="de-only">Haftung</span></div>
+        <div class="demand-text">
+          <span class="fa-only">CAPERA و Union Investment مسئول کل ماجرا هستند: شماره کنتور اشتباه دادند، <strong>دو بار</strong> (کتبی در آگوست ۲۰۲۴ و شفاهی در اکتبر ۲۰۲۵) خطا را پذیرفتند، ولی مسئولیت مالی را قبول نکردند و به همه مکاتبات بی‌جواب ماندند.</span>
+          <span class="de-only">CAPERA und Union Investment sind für den gesamten Vorgang verantwortlich: Sie nannten eine falsche Zählernummer, gestanden den Fehler <strong>zweimal</strong> ein (schriftlich im August 2024 und mündlich im Oktober 2025), übernahmen jedoch keine finanzielle Verantwortung und ließen sämtliche Korrespondenz unbeantwortet.</span>
+        </div>
+      </div>
+
+      <div class="demand">
+        <div class="demand-num">02 · <span class="fa-only">غرامت</span><span class="de-only">Schadensersatz</span></div>
+        <div class="demand-text">
+          <span class="fa-only">بازپرداخت کامل <strong>۲٬۴۰۶٫۹۶ یورو</strong> به‌علاوه هزینه‌های تقسیط، از CAPERA / Union Investment.</span>
+          <span class="de-only">Vollständige Erstattung von <strong>2.406,96 EUR</strong> zuzüglich der Ratenzahlungskosten durch CAPERA / Union Investment.</span>
+        </div>
+      </div>
+
+      <div class="demand">
+        <div class="demand-num">03 · <span class="fa-only">توقف پرداخت</span><span class="de-only">Zahlungsstopp</span></div>
+        <div class="demand-text">
+          <span class="fa-only">توقف پرداخت‌های ماهیانه <strong>۸۰ یورو</strong> به Sirius Inkasso.</span>
+          <span class="de-only">Einstellung der monatlichen Zahlung von <strong>80 EUR</strong> an Sirius Inkasso.</span>
+        </div>
+      </div>
+
+      <div class="question-box">
+        <div class="q-label"><span class="fa-only">سؤال حقوقی</span><span class="de-only">Rechtliche Frage</span></div>
+        <div>
+          <span class="fa-only">CAPERA هنوز تکلیف <span class="mono">Nachzahlung / Guthaben</span> سال ۲۰۲۵ را روشن نکرده. من حدود ۱٫۵ ماه آخر اجاره را پرداخت نکردم، ولی خانه را رسماً تحویل دادم و <span class="mono">Abnahmeprotokoll</span> امضا شد. آیا CAPERA می‌تواند بعداً از این موضوع سوءاستفاده کند؟ چه حقوقی دارم؟</span>
+          <span class="de-only">CAPERA hat die Nebenkostenabrechnung 2025 (Nachzahlung / Guthaben) noch nicht abgeschlossen. Ich habe etwa 1,5 Monate Miete nicht gezahlt, jedoch die Wohnung ordnungsgemäß übergeben, das Abnahmeprotokoll wurde unterschrieben. Kann CAPERA dies später gegen mich verwenden oder Forderungen erheben? Welche Rechte habe ich in dieser Situation?</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" data-idx="18">
+    <div class="container key-evidence">
+      <div class="marker">
+        <span class="fa-only">★ مدرک طلایی ★</span>
+        <span class="de-only">★ Schlüsselbeweis ★</span>
+      </div>
+      <div class="key-quote">
+        <span class="fa-only">ایمیل ۲۶ آگوست ۲۰۲۴ از Hanife Yasar پذیرشی کتبی است که CAPERA نمی‌تواند انکار کند.</span>
+        <span class="de-only">Die E-Mail von Hanife Yasar vom 26. August 2024 ist ein schriftliches Eingeständnis, das CAPERA nicht abstreiten kann.</span>
+      </div>
+      <div class="attribution">
+        <span class="fa-only">— پایان جلد اول · پرونده </span>
+        <span class="de-only">— Ende des ersten Bandes · Akte </span>
+        <span class="mono">12586076</span>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<nav class="nav">
+  <button class="nav-btn" id="nextBtn" aria-label="Next">→</button>
+  <div class="dots" id="dots"></div>
+  <button class="nav-btn" id="prevBtn" aria-label="Previous">←</button>
+</nav>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  const total = slides.length;
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  const dotsContainer = document.getElementById('dots');
+  const progressFill = document.getElementById('progressFill');
+  const progressNum = document.getElementById('progressNum');
+  const progressTotal = document.getElementById('progressTotal');
+  const htmlEl = document.documentElement;
+  const langButtons = document.querySelectorAll('.lang-toggle button');
+
+  let current = 0;
+  let currentLang = 'fa';
+
+  function toPersian(n) { return String(n).replace(/[0-9]/g, d => '۰۱۲۳۴۵۶۷۸۹'[d]).padStart(2, '۰'); }
+  function toLatin(n) { return String(n).padStart(2, '0'); }
+  function formatNum(n) { return currentLang === 'fa' ? toPersian(n) : toLatin(n); }
+  function updateProgressDisplay() {
+    progressTotal.textContent = formatNum(total);
+    progressNum.textContent = formatNum(current + 1);
+  }
+
+  for (let i = 0; i < total; i++) {
+    const d = document.createElement('span');
+    d.className = 'dot' + (i === 0 ? ' active' : '');
+    d.addEventListener('click', () => go(i));
+    dotsContainer.appendChild(d);
+  }
+  const dots = dotsContainer.querySelectorAll('.dot');
+
+  function go(idx) {
+    if (idx < 0 || idx >= total || idx === current) return;
+    const goingForward = idx > current;
+    slides[current].classList.remove('active');
+    if (goingForward) slides[current].classList.add('exit-right');
+    else slides[current].classList.remove('exit-right');
+    setTimeout(() => slides[current].classList.remove('exit-right'), 600);
+    current = idx;
+    slides[current].classList.add('active');
+    slides[current].scrollTop = 0;
+    dots.forEach((d, i) => d.classList.toggle('active', i === current));
+    progressFill.style.width = ((current + 1) / total * 100) + '%';
+    updateProgressDisplay();
+    nextBtn.disabled = current === total - 1;
+    prevBtn.disabled = current === 0;
+  }
+
+  function setLang(lang) {
+    if (lang === currentLang) return;
+    currentLang = lang;
+    htmlEl.setAttribute('lang', lang);
+    htmlEl.setAttribute('dir', lang === 'fa' ? 'rtl' : 'ltr');
+    langButtons.forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
+    updateProgressDisplay();
+  }
+
+  langButtons.forEach(btn => btn.addEventListener('click', () => setLang(btn.dataset.lang)));
+  nextBtn.addEventListener('click', () => go(current + 1));
+  prevBtn.addEventListener('click', () => go(current - 1));
+
+  document.addEventListener('keydown', e => {
+    const isFa = currentLang === 'fa';
+    if (e.key === 'ArrowRight') { e.preventDefault(); go(isFa ? current - 1 : current + 1); }
+    if (e.key === 'ArrowLeft') { e.preventDefault(); go(isFa ? current + 1 : current - 1); }
+    if (e.key === 'PageDown' || e.key === ' ') { e.preventDefault(); go(current + 1); }
+    if (e.key === 'PageUp') { e.preventDefault(); go(current - 1); }
+    if (e.key === 'Home') go(0);
+    if (e.key === 'End') go(total - 1);
+  });
+
+  let touchStartX = 0, touchStartY = 0, touchStartTime = 0;
+  const stage = document.getElementById('stage');
+  stage.addEventListener('touchstart', e => {
+    touchStartX = e.touches[0].clientX;
+    touchStartY = e.touches[0].clientY;
+    touchStartTime = Date.now();
+  }, { passive: true });
+  stage.addEventListener('touchend', e => {
+    const dx = e.changedTouches[0].clientX - touchStartX;
+    const dy = e.changedTouches[0].clientY - touchStartY;
+    const dt = Date.now() - touchStartTime;
+    if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.5 && dt < 800) {
+      const isFa = currentLang === 'fa';
+      if (dx > 0) go(isFa ? current + 1 : current - 1);
+      else go(isFa ? current - 1 : current + 1);
+    }
+  }, { passive: true });
+
+  prevBtn.disabled = true;
+  updateProgressDisplay();
+</script>
+
+</body>
+</html>
