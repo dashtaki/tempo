@@ -726,9 +726,9 @@
 </main>
 
 <nav class="nav">
-  <button class="nav-btn" id="nextBtn" aria-label="Next">→</button>
-  <div class="dots" id="dots"></div>
   <button class="nav-btn" id="prevBtn" aria-label="Previous">←</button>
+  <div class="dots" id="dots"></div>
+  <button class="nav-btn" id="nextBtn" aria-label="Next">→</button>
 </nav>
 
 <script>
@@ -777,11 +777,13 @@
 
   function updateArrows() {
     if (currentLang === 'fa') {
-      // RTL: next button shows ← (visually left), prev shows → (visually right)
+      // RTL: nextBtn is on left side visually → shows ←
+      // prevBtn is on right side visually → shows →
       nextBtn.textContent = '←';
       prevBtn.textContent = '→';
     } else {
-      // LTR: next button shows → (visually right), prev shows ← (visually left)
+      // LTR: nextBtn is on right side visually → shows →
+      // prevBtn is on left side visually → shows ←
       nextBtn.textContent = '→';
       prevBtn.textContent = '←';
     }
